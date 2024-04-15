@@ -1,0 +1,12 @@
+<h3>POST</h3>
+<form [formGroup]="forms3">
+    <label>User ID: </label>
+    <input type="number" formControlName="id" [(ngModel)]="userId"> <br>
+    <label>ID: </label>
+    <input type="text" formControlName="id" [(ngModel)]="id"> <br>
+    <label>Title: </label> 
+    <input type="text" formControlName="author" [(ngModel)]="title"> 
+    <br>
+    <button (click)="pst(userId,id,title)">Post</button>
+    </form>
+    

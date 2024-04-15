@@ -1,0 +1,33 @@
+<h3>GET</h3>
+<form [formGroup]="forms2">
+    <label>All Details: </label>
+    <button (click)="getall()">Get All Details</button>&nbsp;
+    <label>ID of detail to be filtered: </label> 
+    <input type="number" formControlName="numbers" [(ngModel)]="num"> 
+    <button (click)="getspec(num)">Get</button>
+    <table *ngIf="disp" border="1">
+        <tr>
+            <th>UserID</th>
+            <th>ID</th>
+            <th>Title</th>
+        </tr>
+        <tr *ngFor="let views of view">
+        <td>{{views.userId}}</td>
+        <td>{{views.id}}</td>
+        <td>{{views.title}}</td>
+    </tr>
+    </table>
+    <table *ngIf="disp2" border="1">
+        <tr>
+            <th>UserID</th>
+            <th>ID</th>
+            <th>Title</th>
+        </tr>
+        <tr *ngFor="let views of view">
+        <td>{{views.userId}}</td>
+        <td>{{views.id}}</td>
+        <td>{{views.title}}</td>
+    </tr>
+    </table>
+    <br>
+    </form>
